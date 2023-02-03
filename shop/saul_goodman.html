@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Methshop</title>
+        <link rel="icon" href="../img/icon.png">
+
+        <link rel="stylesheet" href="../css/hamburgers.css">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <ul class="navbar">
+            <a href="../index.html"><h1 class="logo">Methshop</h1></a>
+            <a id="balance" href="../balance.html" class="balance"></a>
+            <button class="hamburger hamburger--squeeze" onclick="popoutHamburger()" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </ul>
+
+        <div class="hamburger-popout" style="display: none;">
+            <ul class="hamburger-items">
+                <li><a href="../index.html"><h1>Home</h1></a></li>
+                <li><a href="../shop.html"><h1>Shop</h1></a></li>
+                <li><a href="../about.html"><h1>About</h1></a></li>
+                <li><a href="../help.html"><h1>Help</h1></a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="shop-item">
+                <div>
+                    <img class="shop-item-img" src="../img/item/saul_goodman.png">
+                </div>
+                <div class="shop-item-info">
+                    <h1>Saul Goodman</h1>
+                    <br>
+                    <h2 class="shop-item-price">€949,99</h2>
+                    <br><br>
+                    <a id="shop-btn" href="javascript:buyItem('saul_goodman', 949.99)" class="btn">Kopen</a>
+                </div>
+            </div>
+        </div>
+
+        <script src="shop.js"></script>
+    </body>
+</html>

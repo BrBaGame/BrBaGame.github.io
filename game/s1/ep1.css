@@ -1,0 +1,181 @@
+#gameplay-0 {
+    padding: 5%;
+}
+
+.gameplay-0-items, .gameplay-0-item {
+    display: inline-block;
+}
+
+.gameplay-0-item {
+    padding: 15px;
+}
+
+.gameplay-0-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.gameplay-0-item.active {
+    border: 3px solid var(--accent);
+}
+
+.gameplay-1-image {
+    max-width: 100%;
+}
+
+.gameplay-1-options {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+    transform: translateY(-50%);
+}
+
+.gameplay-2-rv {
+    max-width: 100%;
+}
+
+.gameplay-2-player {
+    position: absolute;
+    width: 150px;
+    z-index: 999;
+}
+
+.gameplay-2-reward {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: var(--accent);
+    font-size: 4em;
+    font-weight: bold;
+    z-index: 9999;
+}
+
+.gameplay-3-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(65%);
+}
+
+.gameplay-3-character {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+@keyframes damage {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.gameplay-3-player {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    z-index: 99;
+}
+
+.gameplay-3-enemy {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    z-index: 99;
+}
+
+.gameplay-3-title {
+    z-index: 99;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 2px 2px 6px #0d3e10;
+}
+
+.gameplay-3-vs {
+    color: #d83535;
+}
+
+.gameplay-3-status {
+    z-index: 99;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 2px 2px 6px #0d3e10;
+}
+
+.gameplay-3-health-player {
+    position: absolute;
+    z-index: 99;
+    top: 15px;
+    left: 15px;
+}
+
+.gameplay-3-health-bar {
+    width: 400px;
+    height: 30px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.gameplay-3-health-fill {
+    height: 100%;
+    background: #35d835;
+    transition: .6s ease;
+}
+
+.gameplay-3-health-fill h1 {
+    position: relative;
+    font-size: 1.5em;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+}
+
+.gameplay-3-health-enemy {
+    position: absolute;
+    z-index: 99;
+    top: 15px;
+    right: 15px;
+    text-align: right;
+}
+
+.gameplay-3-health-enemy .gameplay-3-health-bar .gameplay-3-health-fill h1 {
+    left: -5px;
+}
+
+.gameplay-3-health-enemy .gameplay-3-health-bar .gameplay-3-health-fill {
+    background: #d83535;
+}
+
+.gameplay-3-options {
+    z-index: 99;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gameplay-3-enemy.selectable .gameplay-3-character:hover {
+    filter: brightness(150%);
+    cursor: pointer;
+}
+
+.gameplay-3-character.dead {
+    filter: brightness(50%);
+}
+
+.gameplay-3-character.dead:hover {
+    filter: brightness(50%) !important;
+    cursor: default !important;
+}

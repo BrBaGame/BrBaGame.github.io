@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Methshop</title>
+        <link rel="icon" href="../../img/icon.png">
+
+        <link rel="stylesheet" href="../game.css">
+        <link rel="stylesheet" href="ep1.css">
+    </head>
+    <body>
+        <audio id="sound-talking" src="../sounds/talking.mp3" preload="auto"></audio>
+        <audio id="sound-theme" src="../sounds/theme.mp3" preload="auto" loop></audio>
+        <audio id="sound-victory" src="../sounds/victory.mp3" preload="auto"></audio>
+
+        <audio id="sound-collect" src="../sounds/collect.mp3" preload="auto"></audio>
+        <audio id="sound-fail" src="../sounds/fail.mp3" preload="auto"></audio>
+
+        <div id="toasts"></div>
+
+        <div class="start" id="start">
+            <a class="btn btn-back" href="../../season1.html">Terug</a>
+
+            <div class="start-content">
+                <div class="start-grid">
+                    <div>
+                        <img src="img/thumbnail_e1.jpg">
+                    </div>
+                    <div>
+                        <h1>S1A01 Pilot</h1>
+                        <br>
+                        <p class="overview">Scheikundeleraar Walter White wordt gediagnosticeerd met terminale longkanker en werkt samen met oud-student Jesse Pinkman om crystal meth te koken en te verkopen.</p>
+                    </div>
+                </div>
+                <br>
+                <a class="btn btn-start" onclick="start()">Start</a>
+            </div>
+        </div>
+
+        <div id="intro" class="intro" style="display: none;" id="intro">
+            <video id="intro-video">
+                <source src="../intro.mp4" type="video/mp4">
+            </video>
+
+            <a href="javascript:skipIntro()" class="btn intro-btn">Skip Intro</a>
+        </div>
+
+        <div class="game" style="display: none;" id="game">
+            <img class="image" id="image">
+            <div class="dialog">
+                <h3 class="character" id="character"></h3>
+                <p id="message"></p>
+                <a class="btn dialog-btn" id="next-btn">Volgende</a>
+            </div>
+        </div>
+
+        <div class="pause" style="display: none;" id="pause">
+            <div class="pause-balance">
+                <h2>Balance: <span id="pause-balance">€0</span></h2>
+            </div>
+            <div class="pause-content">
+                <h1>Menu</h1>
+                <br><br>
+                <a href="javascript:unpause()" class="btn">Verder</a>
+                <br><br><br>
+                <h3 style="font-weight: normal;">Muziek: <a href="javascript:toggle_music_setting()" id="music-btn" class="btn">Aan</a></h3>
+                <br><br>
+                <a href="e1.html" class="btn">Verlaten</a>
+            </div>
+        </div>
+
+        <div id="gameplay-0" style="display: none">
+            <span style="display: none;" id="gameplay-0-balance">100</span>
+
+            <h1>Pak de juiste spullen.</h1>
+
+            <br>
+
+            <div class="gameplay-0-items">
+                <a id="gameplay-0-volumetric_flask" href="javascript:gameplay0_selectItem('volumetric_flask')" class="gameplay-0-item">
+                    <img src="img/gameplay0/volumetric_flask.png">
+                    <p>Maatkolf</p>
+                </a><a id="gameplay-0-boiling_flask" href="javascript:gameplay0_selectItem('boiling_flask')" class="gameplay-0-item">
+                    <img src="img/gameplay0/boiling_flask.png">
+                    <p>Kokende Kolf</p>
+                </a>
+
+                <br><br><br>
+
+                <a href="javascript:gameplay0_finish()" class="btn">Klaar</a>
+            </div>
+        </div>
+
+        <div id="gameplay-1" style="display: none">
+            <img id="gameplay-1-img" class="gameplay-1-img" src="img/gameplay1/start.png">
+
+            <div class="gameplay-1-options">
+                <a id="gameplay-1-kick" href="javascript:gameplay1_kick()" class="btn">Schoppen</a>
+            </div>
+        </div>
+
+        <div id="gameplay-2" style="display: none;">
+            <img id="gameplay-2-rv" src="img/rv_inside.jpg" class="gameplay-2-rv">
+            <img style="bottom: 0; left: 0;" id="gameplay-2-player" src="img/pilot_make_meth.png" class="gameplay-2-player">
+            <div id="gameplay-2-meth"></div>
+            <p class="gameplay-2-reward">€<span id="gameplay-2-reward">0,00</span></p>
+        </div>
+
+        <div id="gameplay-3" style="display: none">
+            <img id="gameplay-3-bg" src="img/gameplay3/bg.png" class="gameplay-3-bg">
+
+            <h1 class="gameplay-3-title">Walter & Jesse <span class="gameplay-3-vs">VS</span> Krazy-8 & Emilio</h1>
+
+            <h1 class="gameplay-3-status"><span id="gameplay-3-turn">Walter</span>'s beurt</h1>
+            
+            <div class="gameplay-3-health-player">
+                <h1>Walter</h1>
+                <div class="gameplay-3-health-bar">
+                    <div id="gameplay-3-health-walter-fill" class="gameplay-3-health-fill" style="width: 100%;">
+                        <h1 id="gameplay-3-health-walter-count">100</h1>
+                    </div>
+                </div>
+                <h1>Jesse</h1>
+                <div class="gameplay-3-health-bar">
+                    <div id="gameplay-3-health-jesse-fill" class="gameplay-3-health-fill" style="width: 100%;">
+                        <h1 id="gameplay-3-health-jesse-count">100</h1></div>
+                </div>
+            </div>
+
+            <div class="gameplay-3-health-enemy">
+                <h1>Krazy-8</h1>
+                <div class="gameplay-3-health-bar">
+                    <div id="gameplay-3-health-krazy8-fill" class="gameplay-3-health-fill" style="width: 100%;">
+                        <h1 id="gameplay-3-health-krazy8-count">100</h1>
+                    </div>
+                </div>
+                <h1>Emilio</h1>
+                <div class="gameplay-3-health-bar">
+                    <div id="gameplay-3-health-emilio-fill" class="gameplay-3-health-fill" style="width: 100%;">
+                        <h1 id="gameplay-3-health-emilio-count">100</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div id="gameplay-3-options" class="gameplay-3-options">
+                <a href="javascript:gameplay3_attack()" id="gameplay-3-attack" class="btn">Aanvallen</a>
+                <a href="javascript:gameplay3_run()" class="btn" id="gameplay-3-run">Ren</a>
+            </div>
+
+            <div class="gameplay-3-player">
+                <img class="gameplay-3-character" id="gameplay-3-walter" src="img/gameplay3/walter.png">
+                <img class="gameplay-3-character" id="gameplay-3-jesse" src="img/gameplay3/jesse.png">
+            </div>
+
+            <div class="gameplay-3-enemy" id="gameplay-3-enemies">
+                <img onclick="gameplay3_attack_character('krazy8')" class="gameplay-3-character" id="gameplay-3-krazy8" src="img/gameplay3/krazy8.jpg">
+                <img onclick="gameplay3_attack_character('emilio')" class="gameplay-3-character" id="gameplay-3-emilio" src="img/gameplay3/emilio.png">
+            </div>
+        </div>
+
+        <div class="gameplay-victory" id="gameplay-victory" style="display: none;">
+            <img id="gameplay-victory-bg">
+            <div class="gameplay-victory-content">
+                <h1>Gelukt!</h1>
+                <br>
+                <h3>+ <span id="gameplay-victory-balance"></span></h3>
+                <br><br>
+                <a class="btn" id="gameplay-victory-next">Volgende</a>
+            </div>
+        </div>
+
+        <script src="e1_dialogs.js"></script>
+        <script src="e1.js"></script>
+    </body>
+</html>

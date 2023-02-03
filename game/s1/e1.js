@@ -502,6 +502,8 @@ function gameplay3_start(){
 
     document.getElementById("gameplay-3-walter").classList.remove("dead")
     document.getElementById("gameplay-3-jesse").classList.remove("dead")
+    document.getElementById("gameplay-3-krazy8").classList.remove("dead")
+    document.getElementById("gameplay-3-emilio").classList.remove("dead")
 }
 
 document.body.onkeydown = (e) => {

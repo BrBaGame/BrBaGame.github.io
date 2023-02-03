@@ -1,0 +1,56 @@
+Date : 2023-02-03 11:45:22
+Directory : /home/jklijzing/BrBaGame.github.io
+Total : 23 files,  2680 codes, 100 comments, 380 blanks, all 3160 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JavaScript |          7 |      1,094 |          0 |        136 |      1,230 |
+| CSS        |          4 |      1,035 |        100 |        171 |      1,306 |
+| HTML       |         12 |        551 |          0 |         73 |        624 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                       | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                          |         23 |      2,680 |        100 |        380 |      3,160 |
+| . (Files)                                                  |          7 |        213 |          0 |         28 |        241 |
+| css                                                        |          2 |        711 |        100 |        111 |        922 |
+| game                                                       |          5 |      1,333 |          0 |        193 |      1,526 |
+| game (Files)                                               |          1 |        171 |          0 |         32 |        203 |
+| game/s1                                                    |          4 |      1,162 |          0 |        161 |      1,323 |
+| js                                                         |          4 |        197 |          0 |         19 |        216 |
+| shop                                                       |          5 |        226 |          0 |         29 |        255 |
++------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                   | language   | code       | comment    | blank      | total      |
++------------------------------------------------------------+------------+------------+------------+------------+------------+
+| /home/jklijzing/BrBaGame.github.io/about.html              | HTML       |         29 |          0 |          4 |         33 |
+| /home/jklijzing/BrBaGame.github.io/balance.html            | HTML       |         32 |          0 |          4 |         36 |
+| /home/jklijzing/BrBaGame.github.io/css/hamburgers.css      | CSS        |        534 |        100 |         72 |        706 |
+| /home/jklijzing/BrBaGame.github.io/css/style.css           | CSS        |        177 |          0 |         39 |        216 |
+| /home/jklijzing/BrBaGame.github.io/game/game.css           | CSS        |        171 |          0 |         32 |        203 |
+| /home/jklijzing/BrBaGame.github.io/game/s1/e1.html         | HTML       |        150 |          0 |         29 |        179 |
+| /home/jklijzing/BrBaGame.github.io/game/s1/e1.js           | JavaScript |        433 |          0 |        104 |        537 |
+| /home/jklijzing/BrBaGame.github.io/game/s1/e1_dialogs.js   | JavaScript |        426 |          0 |          0 |        426 |
+| /home/jklijzing/BrBaGame.github.io/game/s1/ep1.css         | CSS        |        153 |          0 |         28 |        181 |
+| /home/jklijzing/BrBaGame.github.io/help.html               | HTML       |         26 |          0 |          4 |         30 |
+| /home/jklijzing/BrBaGame.github.io/index.html              | HTML       |         27 |          0 |          4 |         31 |
+| /home/jklijzing/BrBaGame.github.io/js/about.js             | JavaScript |        143 |          0 |          7 |        150 |
+| /home/jklijzing/BrBaGame.github.io/js/balance.js           | JavaScript |         23 |          0 |          6 |         29 |
+| /home/jklijzing/BrBaGame.github.io/js/navbar.js            | JavaScript |         28 |          0 |          6 |         34 |
+| /home/jklijzing/BrBaGame.github.io/js/script.js            | JavaScript |          3 |          0 |          0 |          3 |
+| /home/jklijzing/BrBaGame.github.io/season1.html            | HTML       |         30 |          0 |          4 |         34 |
+| /home/jklijzing/BrBaGame.github.io/seasons.html            | HTML       |         29 |          0 |          4 |         33 |
+| /home/jklijzing/BrBaGame.github.io/shop.html               | HTML       |         40 |          0 |          4 |         44 |
+| /home/jklijzing/BrBaGame.github.io/shop/blue_meth.html     | HTML       |         47 |          0 |          4 |         51 |
+| /home/jklijzing/BrBaGame.github.io/shop/diy_meth.html      | HTML       |         47 |          0 |          4 |         51 |
+| /home/jklijzing/BrBaGame.github.io/shop/pollos_piezas.html | HTML       |         47 |          0 |          4 |         51 |
+| /home/jklijzing/BrBaGame.github.io/shop/saul_goodman.html  | HTML       |         47 |          0 |          4 |         51 |
+| /home/jklijzing/BrBaGame.github.io/shop/shop.js            | JavaScript |         38 |          0 |         13 |         51 |
+| Total                                                      |            |      2,680 |        100 |        380 |      3,160 |
++------------------------------------------------------------+------------+------------+------------+------------+------------+

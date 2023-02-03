@@ -29,6 +29,7 @@ document.querySelector(".navbar").innerHTML = `
 document.querySelector(".hamburger-items").innerHTML = `
 <li><a href="index.html"><h1>Home</h1></a></li>
 <li><a href="shop.html"><h1>Shop</h1></a></li>
+<li><a href="balance.html"><h1>Bankrekening</h1></a></li>
 <li><a href="about.html"><h1>About</h1></a></li>
 <li><a href="help.html"><h1>Help</h1></a></li>
 `

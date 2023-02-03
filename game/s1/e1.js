@@ -499,6 +499,9 @@ function gameplay3_start(){
     document.getElementById("gameplay-3-health-jesse-fill").style = "width: 100%;"
     document.getElementById("gameplay-3-health-krazy8-fill").style = "width: 100%;"
     document.getElementById("gameplay-3-health-emilio-fill").style = "width: 100%;"
+
+    document.getElementById("gameplay-3-walter").classList.remove("dead")
+    document.getElementById("gameplay-3-jesse").classList.remove("dead")
 }
 
 document.body.onkeydown = (e) => {
